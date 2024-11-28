@@ -50,6 +50,67 @@ Por ejemplo si enviamos el siguiente DNA a https://1erParcial-desarrollo-de-soft
 
  
 ```
-
 Devolvera dependiendo si es mutante o no, true o false, tambien en formato json
+
+```json
+
+{
+    "mutant": true
+}
+
+```
+Aqui un ejemplo de un DNA humano.
+
+```json
+
+{
+    "stringDna": [
+                "GAGAA",
+                "GGTAA",
+                "GTCTG",
+                "GGTAA",
+                "AAGAA"
+    ]
+}
+
+```
+
+
+```json
+{
+    "mutant": false
+}
+```
+
+<h2>📖 Estadisticas | GET /stats </h2>
+
+Si enviamos una peticion al siguiente link, nos devolvera en formato Json, la cantidad de mutantes y humanos detectados, asi como su proporcion.
+
+Ejemplo
+
+```json
+
+{
+    "count_mutant_dna": 3,
+    "count_human_dna": 2,
+    "ratio": 1.5
+}
+
+```
+
+<h1> Diagrama de secuencia </h1>
+
+
+<h3> Si el DNA pedido ya existe en la base de datos</h3>
+
+![Diagrama de secuencai  Mutantes Existe el ADN](https://github.com/user-attachments/assets/cc1699b5-fae2-4e80-a5d1-91673e52d1f8)
+
+<h3> Si el DNA pedido no existe en la base de datos y debe ser verificado</h3>
+
+![Secuencia  Mutantes no existe el ADN](https://github.com/user-attachments/assets/ce9aa70a-ee5f-4864-8ccc-2aaa951d1b78)
+
+<h3> Uso del endpoint /stats </h3>
+
+![Secuencia  Stats](https://github.com/user-attachments/assets/ea43419d-d6bd-42ce-a811-4fef49b3c8db)
+
 Valentino Trefontane 3k9
